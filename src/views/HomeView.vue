@@ -23,6 +23,6 @@ export default {
     MySkills,
     MyQualifications,
     MyAspirations
-}
+  }
 }
 </script>
