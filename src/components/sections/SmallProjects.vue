@@ -12,16 +12,19 @@
 <script>
 import PageSection from '../templates/PageSection.vue';
 import WheelsOfFortune from '../WheelsOfFortune.vue';
+import Calculator from '../Calculator.vue';
 
 export default {
   components: {
     PageSection,
-    WheelsOfFortune
+    WheelsOfFortune,
+    Calculator
   },
   data() {
     return {
       projects: [
-        { title: 'Wheels of Fortune', icon: 'ri-donut-chart-fill', component: 'wheels-of-fortune' }
+        { title: 'Wheels of Fortune', icon: 'ri-donut-chart-fill', component: 'wheels-of-fortune' },
+        { title: 'Calculator', icon: 'ri-calculator-line', component: 'calculator' },
       ],
     };
   },
