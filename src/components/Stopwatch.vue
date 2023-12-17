@@ -3,7 +3,7 @@
     <div class="stop-watch-time">
       <span id="minutes">{{ minutes }}</span>
       <span id="seconds">{{ seconds }}</span>
-      <span id="milliseconds">{{ miliseconds }}</span>
+      <span id="milliseconds">{{ milliseconds }}</span>
     </div>
 
     <div>
@@ -22,7 +22,7 @@ export default {
 
       minutes: '00 :',
       seconds: '00 :',
-      miliseconds: '00',
+      milliseconds: '00',
 
       startTime: null,
       pausedTime: 0,
