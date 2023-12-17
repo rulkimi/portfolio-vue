@@ -1,19 +1,17 @@
 <template>
-  <section class="skills section" id="skills">
-    <h2 class="section__title">Skills</h2>
-    <span class="section__subtitle">My favourite skills</span>
-    <div class="skills__container container grid section__border">
-      <SkillsContent v-for="skill in skills" :key="skill.title" :title="skill.title" :icon="skill.icon" :skills="skill.types"/>
-    </div>
-  </section>
+  <PageSection type="skills" title="Skills" subtitle="My favourite skills">
+    <SkillsContent v-for="skill in skills" :key="skill.title" :title="skill.title" :icon="skill.icon" :skills="skill.types"/>
+  </PageSection>
 </template>
 
 <script>
+import PageSection from '../templates/PageSection.vue'
 import SkillsContent from '../SkillsContent.vue';
 
 export default {
   components: {
-    SkillsContent
+    SkillsContent,
+    PageSection
   },
   data() {
     return {
