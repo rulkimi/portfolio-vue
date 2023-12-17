@@ -1,16 +1,27 @@
 <template>
   <PageSection type="skills" title="Skills" subtitle="My favourite skills">
-    <SkillsContent v-for="skill in skills" :key="skill.title" :title="skill.title" :icon="skill.icon" :skills="skill.types"/>
+    <div v-for="item in skills" class="skills__content">
+      <h3 class="skills__title">
+        <i :class="item.icon"></i> {{ item.title }}
+      </h3>
+      <div class="skills__info">
+        <div v-for="skill in item.types" :key="skill.name" class="skills__data">
+          <div class="skills__blob">
+            <img :src="skill.image" :alt="skill.name">
+          </div>
+          <h3 class="skills__name">{{ skill.name }}</h3>
+          <span class="skills__subtitle">{{ skill.mastery }}</span>
+        </div>
+      </div>
+    </div>
   </PageSection>
 </template>
 
 <script>
 import PageSection from '../templates/PageSection.vue'
-import SkillsContent from '../SkillsContent.vue';
 
 export default {
   components: {
-    SkillsContent,
     PageSection
   },
   data() {
