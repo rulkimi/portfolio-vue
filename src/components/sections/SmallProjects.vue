@@ -13,18 +13,21 @@
 import PageSection from '../templates/PageSection.vue';
 import WheelsOfFortune from '../WheelsOfFortune.vue';
 import Calculator from '../Calculator.vue';
+import Stopwatch from '../Stopwatch.vue';
 
 export default {
   components: {
     PageSection,
     WheelsOfFortune,
-    Calculator
+    Calculator,
+    Stopwatch
   },
   data() {
     return {
       projects: [
         { title: 'Wheels of Fortune', icon: 'ri-donut-chart-fill', component: 'wheels-of-fortune' },
         { title: 'Calculator', icon: 'ri-calculator-line', component: 'calculator' },
+        { title: 'Stopwatch', icon: 'ri-timer-line', component: 'stopwatch' },
       ],
     };
   },
