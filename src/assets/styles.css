@@ -559,13 +559,13 @@ body.dark-theme {
   margin-bottom: 1.25rem;
 }
 
-.qualification__country, .qualification__year {
+.qualification__place, .qualification__year {
   display: block;
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
 
-.qualification__country {
+.qualification__place {
   margin-bottom: .75rem;
 }
 
