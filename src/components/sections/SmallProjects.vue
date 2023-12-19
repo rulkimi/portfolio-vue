@@ -16,6 +16,7 @@ import Calculator from '../Calculator.vue';
 import Stopwatch from '../Stopwatch.vue';
 import TicTacToe from '../TicTacToe.vue';
 import TodoList from '../TodoList.vue';
+import RockPaperScissors from '../RockPaperScissors.vue';
 
 export default {
   components: {
@@ -24,7 +25,8 @@ export default {
     Calculator,
     Stopwatch,
     TicTacToe,
-    TodoList
+    TodoList,
+    RockPaperScissors
   },
   data() {
     return {
@@ -34,6 +36,7 @@ export default {
         { title: 'Stopwatch', icon: 'ri-timer-line', component: 'stopwatch' },
         { title: 'Tic-Tac-Toe', icon: 'ri-artboard-2-line', component: 'tic-tac-toe' },
         { title: 'Todo List', icon: 'ri-calendar-todo-fill', component: 'todo-list' },
+        { title: 'Rock Paper Scissors', icon: 'ri-scissors-2-line', component: 'rock-paper-scissors' },
       ],
     };
   },
