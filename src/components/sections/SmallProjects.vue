@@ -17,6 +17,7 @@ import Stopwatch from '../Stopwatch.vue';
 import TicTacToe from '../TicTacToe.vue';
 import TodoList from '../TodoList.vue';
 import RockPaperScissors from '../RockPaperScissors.vue';
+import { sr } from '@/utils/scroll-reveal';
 
 export default {
   components: {
@@ -39,6 +40,14 @@ export default {
         { title: 'Rock Paper Scissors', icon: 'ri-scissors-2-line', component: 'rock-paper-scissors' },
       ],
     };
+  },
+  mounted() {
+    // this.$nextTick(() => {
+    //   this.projects.forEach((project, index) => {
+    //     const projectItem = this.$refs.projectItems[index];
+    //     sr.reveal(projectItem, { delay: 200 * index, origin: 'bottom', distance: '20px' });
+    //   });
+    // });
   },
 };
 </script>
