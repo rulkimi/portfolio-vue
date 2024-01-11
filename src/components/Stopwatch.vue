@@ -64,7 +64,7 @@ export default {
       this.startPause = 'Start';
       this.minutes = '00 :';
       this.seconds = '00 :';
-      this.miliseconds = '00';
+      this.milliseconds = '00';
     }
   }
 }
@@ -97,32 +97,6 @@ export default {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
-}
-
-/* button from google starts*/
-.stop-watch-body button, .tic-tac-toe button, .rock-paper-scissor .reset-score-button {
-  appearance: none;
-  background-color: #FAFBFC;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #24292E;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
 }
 
 @media screen and (max-width: 575px) {
