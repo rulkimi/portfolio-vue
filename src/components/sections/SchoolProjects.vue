@@ -3,7 +3,7 @@
     <swiper
       class="projects__container swiper"
       :slides-per-view="2"
-      :navigation="{ clickable: true, nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }"
+      navigation
       :pagination="{ clickable: true }"
       :space-between="50"
       @swiper="onSwiper"
