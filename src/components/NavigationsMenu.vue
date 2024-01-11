@@ -18,7 +18,7 @@
     </div>
     <div class="nav__buttons">
       <!-- theme change buttons -->
-      <i class="ri-moon-line change-theme" id="theme-button"></i>
+      <i class="ri-moon-line change-theme" id="theme-button" @click="toggleTheme"></i>
 
       <!-- toggle button -->
       <div class="nav__toggle" id="nav-toggle" @click="toggleMenu">
@@ -41,7 +41,17 @@ export default {
         { title: 'Contact', link: '#contact' },
       ],
       activeLink: '#home', // Add a new data property to track the active link
+      darkTheme: 'dark-theme',
+      iconTheme: 'ri-sun-line',
     };
+  },
+  computed: {
+    currentTheme() {
+      return this.$el.classList.contains(this.darkTheme) ? 'dark' : 'light';
+    },
+    currentIconClass() {
+      return document.body.classList.contains(this.darkTheme) ? 'ri-moon-line' : 'ri-sun-line';
+    },
   },
   methods: {
     isActiveLink(link) {
@@ -65,9 +75,22 @@ export default {
         }
       });
     },
+    toggleTheme() {
+      const body = document.body;
+      body.classList.toggle(this.darkTheme);
+      localStorage.setItem('selected-theme', body.classList.contains(this.darkTheme) ? 'dark' : 'light');
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.scrollActive);
+
+    // Apply the theme and icon on component mount
+    const selectedTheme = localStorage.getItem('selected-theme');
+    const selectedIcon = localStorage.getItem('selected-icon');
+    if (selectedTheme) {
+      this.$el.classList[selectedTheme === 'dark' ? 'add' : 'remove'](this.darkTheme);
+      this.$el.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](this.iconTheme);
+    }
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.scrollActive);
