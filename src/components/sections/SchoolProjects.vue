@@ -1,5 +1,5 @@
 <template>
-  <PageSection type="projects" title="School Projects" subtitle="Most recent work">
+  <PageSection :notGrid="true" type="projects" title="School Projects" subtitle="Most recent work">
     <swiper
       class="projects__container swiper"
       :slides-per-view="2"
