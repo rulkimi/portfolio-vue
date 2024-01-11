@@ -17,7 +17,7 @@ import Stopwatch from '../Stopwatch.vue';
 import TicTacToe from '../TicTacToe.vue';
 import TodoList from '../TodoList.vue';
 import RockPaperScissors from '../RockPaperScissors.vue';
-import { sr } from '@/utils/scroll-reveal';
+// import { sr } from '@/utils/scroll-reveal';
 
 export default {
   components: {
@@ -51,3 +51,54 @@ export default {
   },
 };
 </script>
+
+<style>
+.small-projects {
+  position: relative;
+}
+
+.small-projects__container {
+  /* display: grid; */
+  row-gap: 3.5rem;
+  column-gap: 3.5rem;
+  /* grid-template-columns: 1fr 1fr ; */
+}
+
+.small-projects__content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text within the container */
+  background-color: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
+  padding: 30px;
+}
+
+.small-projects__title {
+  font-size: 1.5rem;
+  font-weight: initial;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 575px) {
+  .small-projects__container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text within the container */
+  }
+
+  .small-projects__content {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .small-projects__container {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+</style>

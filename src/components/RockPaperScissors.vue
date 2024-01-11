@@ -84,3 +84,37 @@ export default {
   }
 }
 </script>
+
+<style>
+.move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px solid black;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.score {
+  margin-top: 60px;
+}
+
+.reset-score-button{
+  background-color: white;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+</style>

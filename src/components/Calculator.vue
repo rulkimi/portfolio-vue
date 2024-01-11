@@ -83,3 +83,30 @@ export default {
   }
 }
 </script>
+
+<style>
+.calculator button {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  margin: 2px;
+}
+
+.calculator .orange-button {
+  background-color: rgb(254, 160, 10);
+}
+
+.calculator .number-display {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 10px;
+}
+</style>
