@@ -4,6 +4,7 @@
       class="projects__container swiper"
       :slides-per-view="2"
       navigation
+      loop
       :pagination="{ clickable: true }"
       :space-between="50"
       @swiper="onSwiper"
