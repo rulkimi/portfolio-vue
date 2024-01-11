@@ -2,35 +2,41 @@
   <footer class="footer">
     <div class="footer__container container">
       <h1 class="footer__title">Azrul</h1>
-      <p>Fresh Graduate</p>
+      <p>Junior Front-end Developer</p>
 
       <ul class="footer__list">
-        <li>
-          <a href="#home" class="footer__link">Home</a>
-        </li>
-
-        <li>
-          <a href="#skills" class="footer__link">Skills</a>
-        </li>
-
-        <li>
-          <a href="#small-projects" class="footer__link">Projects</a>
+        <li v-for="(link, index) in footerLinks" :key="index">
+          <a :href="link.href" class="footer__link">{{ link.text }}</a>
         </li>
       </ul>
 
       <ul class="footer_social">
-        <a href="https://www.linkedin.com/in/azrul-hakimi-75a32420a/" target="_blank" class="footer__social-link">
-          <i class="ri-linkedin-box-line"></i>
-        </a>
-
-        <a href="https://www.github.com/rulkimi" target="_blank" class="footer__social-link">
-          <i class="ri-github-line"></i>
+        <a v-for="(social, index) in socialLinks" :key="index" :href="social.href" target="_blank" class="footer__social-link">
+          <i :class="social.icon"></i>
         </a>
       </ul>
 
       <span class="footer__copy">
-          Special Thanks to Bedimcode
+        Special Thanks to Bedimcode
       </span>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      footerLinks: [
+        { text: "Home", href: "#home" },
+        { text: "Skills", href: "#skills" },
+        { text: "Projects", href: "#small-projects" },
+      ],
+      socialLinks: [
+        { icon: "ri-linkedin-box-line", href: "https://www.linkedin.com/in/azrul-hakimi-75a32420a/" },
+        { icon: "ri-github-line", href: "https://www.github.com/rulkimi" },
+      ],
+    };
+  },
+};
+</script>

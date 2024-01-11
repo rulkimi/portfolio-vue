@@ -36,8 +36,8 @@ export default {
         { title: 'Home', link: '#home' },
         { title: 'Skills', link: '#skills' },
         { title: 'Qualification', link: '#qualification' },
-        { title: 'Aspirations', link: '#aspirations' },
         { title: 'Projects', link: '#small-projects' },
+        { title: 'Aspirations', link: '#aspirations' },
         { title: 'Contact', link: '#contact' },
       ],
       activeLink: '#home', // Add a new data property to track the active link

@@ -4,9 +4,9 @@
     <HomePage />
     <MySkills />
     <MyQualifications />
-    <MyAspirations />
     <SmallProjects />
     <SchoolProjects />
+    <MyAspirations />
     <ContactMe />
     <TheFooter />
   </main>
