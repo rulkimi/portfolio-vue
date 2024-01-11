@@ -9,7 +9,7 @@
         </h1>
         <div class="home__blob grid">
           <div class="home__perfil">
-            <img src="@/assets/img/azrul_photo.png" alt="home perfil">
+            <img src="@/assets/img/kimi_photo.png" alt="home perfil">
           </div>
           <img src="@/assets/img/shape-wawes.svg" alt="assets/img/shape-circle.svg" class="home__shape-wawes">
           <img src="@/assets/img/shape-circle.svg" alt="" class="home__shape-circle">
@@ -21,7 +21,7 @@
           <a href="https://github.com/rulkimi" target="_blank" class="home__social-link">
             <i class="ri-github-line"></i>
           </a>
-          <a href="https://github.com/rulkimi/azrul-portfolio/raw/main/azrul-resume.pdf" target="_blank" download="https://github.com/rulkimi/quiz/blob/main/azrul_resume.pdf"><button class="home__resume" role="button">Download Resume</button></a>
+          <a href="https://github.com/rulkimi/portfolio-vue/raw/main/kimi_resume.pdf" target="_blank" download="https://github.com/rulkimi/quiz/blob/main/azrul_resume.pdf"><button class="home__resume" role="button">Download Resume</button></a>
         </ul>
       </div>
       <HomeInfos />
