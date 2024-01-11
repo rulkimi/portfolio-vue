@@ -1,12 +1,12 @@
 <template>
-  <PageSection type="projects" title="School Projects" subtitle="Most recent work">
+  <PageSection :notGrid="true" type="projects" title="School Projects" subtitle="Most recent work">
     <swiper
       class="projects__container swiper"
-      :slides-per-view="2"
+      :breakpoints="{ 1200: { slidesPerView: 2 } }"
       navigation
       loop
       :pagination="{ clickable: true }"
-      :space-between="50"
+      :space-between="56"
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
