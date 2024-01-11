@@ -8,6 +8,7 @@
     <SmallProjects />
     <SchoolProjects />
     <ContactMe />
+    <TheFooter />
   </main>
 </template>
 
@@ -20,6 +21,7 @@ import MyAspirations from '@/components/sections/MyAspirations.vue';
 import SmallProjects from '@/components/sections/SmallProjects.vue';
 import SchoolProjects from '@/components/sections/SchoolProjects.vue';
 import ContactMe from '@/components/sections/ContactMe.vue';
+import TheFooter from './components/sections/TheFooter.vue';
 import { sr } from '@/utils/scroll-reveal';
 
 export default {
@@ -32,7 +34,8 @@ export default {
     MyAspirations,
     SmallProjects,
     SchoolProjects,
-    ContactMe
+    ContactMe,
+    TheFooter
   },
   mounted() {
     sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`);
