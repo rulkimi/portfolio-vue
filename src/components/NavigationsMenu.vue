@@ -18,7 +18,7 @@
     </div>
     <div class="nav__buttons">
       <!-- theme change buttons -->
-      <i class="ri-moon-line change-theme" id="theme-button" @click="toggleTheme"></i>
+      <i class="change-theme" :class="currentIconClass" id="theme-button" @click="toggleTheme"></i>
 
       <!-- toggle button -->
       <div class="nav__toggle" id="nav-toggle" @click="toggleMenu">
@@ -41,17 +41,9 @@ export default {
         { title: 'Contact', link: '#contact' },
       ],
       activeLink: '#home', // Add a new data property to track the active link
-      darkTheme: 'dark-theme',
-      iconTheme: 'ri-sun-line',
+      darkTheme: false,
+      currentIconClass: 'ri-sun-line',
     };
-  },
-  computed: {
-    currentTheme() {
-      return this.$el.classList.contains(this.darkTheme) ? 'dark' : 'light';
-    },
-    currentIconClass() {
-      return document.body.classList.contains(this.darkTheme) ? 'ri-moon-line' : 'ri-sun-line';
-    },
   },
   methods: {
     isActiveLink(link) {
@@ -76,20 +68,21 @@ export default {
       });
     },
     toggleTheme() {
-      const body = document.body;
-      body.classList.toggle(this.darkTheme);
-      localStorage.setItem('selected-theme', body.classList.contains(this.darkTheme) ? 'dark' : 'light');
+      this.darkTheme = !this.darkTheme;
+      this.currentIconClass = this.darkTheme ? 'ri-moon-line' : 'ri-sun-line';
+      document.body.classList.toggle('dark-theme');
+      localStorage.setItem('selected-theme', this.darkTheme ? 'dark' : 'light');
+      localStorage.setItem('selected-icon', this.currentIconClass);
     },
   },
   mounted() {
     window.addEventListener('scroll', this.scrollActive);
 
-    // Apply the theme and icon on component mount
     const selectedTheme = localStorage.getItem('selected-theme');
-    const selectedIcon = localStorage.getItem('selected-icon');
     if (selectedTheme) {
-      this.$el.classList[selectedTheme === 'dark' ? 'add' : 'remove'](this.darkTheme);
-      this.$el.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](this.iconTheme);
+      this.darkTheme = selectedTheme === 'dark';
+      this.currentIconClass = selectedTheme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
+      document.body.classList[this.darkTheme ? 'add' : 'remove']('dark-theme');
     }
   },
   beforeDestroy() {
