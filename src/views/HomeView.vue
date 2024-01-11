@@ -7,6 +7,7 @@
     <MyAspirations />
     <SmallProjects />
     <SchoolProjects />
+    <ContactMe />
   </main>
 </template>
 
@@ -18,6 +19,7 @@ import MyQualifications from '@/components/sections/MyQualifications.vue';
 import MyAspirations from '@/components/sections/MyAspirations.vue';
 import SmallProjects from '@/components/sections/SmallProjects.vue';
 import SchoolProjects from '@/components/sections/SchoolProjects.vue';
+import ContactMe from '@/components/sections/ContactMe.vue';
 
 export default {
   name: 'HomeView',
@@ -28,7 +30,8 @@ export default {
     MyQualifications,
     MyAspirations,
     SmallProjects,
-    SchoolProjects
+    SchoolProjects,
+    ContactMe
 }
 }
 </script>
