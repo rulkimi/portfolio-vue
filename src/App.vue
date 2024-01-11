@@ -8,8 +8,11 @@
     <SchoolProjects />
     <MyAspirations />
     <ContactMe />
-    <TheFooter />
   </main>
+  <TheFooter />
+  <a href="#" class="scrollup" id="scroll-up" @click="scrollToTop">
+    <i class="ri-arrow-up-line"></i>
+  </a>
 </template>
 
 <script>
@@ -37,12 +40,33 @@ export default {
     ContactMe,
     TheFooter
   },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  },
   mounted() {
     sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`);
     sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100});
     sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'});
     sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'});
     sr.reveal(`.qualification__content, .aspirations__card`, {interval: 100});
+
+    const scrollUp = () => {
+      const scrollUpElement = document.getElementById('scroll-up');
+      window.scrollY >= 350
+        ? scrollUpElement.classList.add('show-scroll')
+        : scrollUpElement.classList.remove('show-scroll');
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', scrollUp);
+
+    // Call on page load to handle initial state
+    scrollUp();
   }
 }
 </script>
