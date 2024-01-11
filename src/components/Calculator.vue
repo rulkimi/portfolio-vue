@@ -60,8 +60,16 @@ export default {
       localStorage.setItem('savedCalc', this.calculation);
     },
     evaluate() {
-      this.calculation = eval(this.calculation);
-      this.saveCalculation();
+      try {
+        this.calculation = eval(this.calculation);
+        if (isNaN(this.calculation) || !isFinite(this.calculation)) {
+          throw new Error("Invalid calculation result");
+        }
+        this.saveCalculation();
+      } catch (error) {
+        this.display = '';
+        alert("Error evaluating calculation!");
+      }
     },
     clearCalculation() {
       this.calculation = '';

@@ -63,11 +63,11 @@ export default {
         });
 
         // Show an alert with the result
-        if (winningSegment) {
-          alert("Congrats, you won " + winningSegment.prize + "!");
-        } else {
-          alert("Sorry, try again!");
-        }
+        // if (winningSegment) {
+        //   alert("Congrats, you won " + winningSegment.prize + "!");
+        // } else {
+        //   alert("Sorry, try again!");
+        // }
 
         // Re-enable the spin button
         this.isSpinning = false;
