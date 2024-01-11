@@ -30,7 +30,7 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
+### Run the unit tests
 ```
 npm run test:unit
 ```
