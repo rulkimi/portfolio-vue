@@ -5,7 +5,6 @@ import store from './store'
 
 import '@/assets/styles.css'
 import '@/assets/small-projects.css'
-import '@/assets/swiper-bundle.min.css'
 
 import '@/assets/scrollreveal.min.js'
 

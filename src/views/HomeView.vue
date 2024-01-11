@@ -6,6 +6,7 @@
     <MyQualifications />
     <MyAspirations />
     <SmallProjects />
+    <SchoolProjects />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import MySkills from '@/components/sections/MySkills.vue';
 import MyQualifications from '@/components/sections/MyQualifications.vue';
 import MyAspirations from '@/components/sections/MyAspirations.vue';
 import SmallProjects from '@/components/sections/SmallProjects.vue';
+import SchoolProjects from '@/components/sections/SchoolProjects.vue';
 
 export default {
   name: 'HomeView',
@@ -25,7 +27,8 @@ export default {
     MySkills,
     MyQualifications,
     MyAspirations,
-    SmallProjects
-  }
+    SmallProjects,
+    SchoolProjects
+}
 }
 </script>
