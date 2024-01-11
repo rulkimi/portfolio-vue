@@ -7,7 +7,7 @@
       <ul class="nav__list grid">
         <li v-for="item in items" class="nav__item">
           <a :href="item.link" class="nav__link" @click="toggleMenu" :class="{ 'active-link': isActiveLink(item.link) }">
-            <i class="ri-home-5-line"></i> {{ item.title }}
+            <i :class="item.icon"></i> {{ item.title }}
           </a>
         </li>
       </ul>
@@ -33,12 +33,12 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Home', link: '#home' },
-        { title: 'Skills', link: '#skills' },
-        { title: 'Qualification', link: '#qualification' },
-        { title: 'Projects', link: '#small-projects' },
-        { title: 'Aspirations', link: '#aspirations' },
-        { title: 'Contact', link: '#contact' },
+        { title: 'Home', link: '#home', icon: 'ri-home-5-line' },
+        { title: 'Skills', link: '#skills', icon: 'ri-trophy-line' },
+        { title: 'Qualification', link: '#qualification', icon: 'ri-book-open-line' },
+        { title: 'Projects', link: '#small-projects', icon: 'ri-image-line' },
+        { title: 'Aspirations', link: '#aspirations', icon: 'ri-briefcase-line' },
+        { title: 'Contact', link: '#contact', icon: 'ri-chat-3-line' },
       ],
       activeLink: '#home', // Add a new data property to track the active link
       darkTheme: false,
