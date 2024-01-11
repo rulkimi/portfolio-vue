@@ -1,7 +1,7 @@
 <template>
   <nav class="nav container">
     <a href="#" class="nav__logo">
-      Azrul
+      Kimi
     </a>
     <div class="nav__menu" ref="nav-menu">
       <ul class="nav__list grid">

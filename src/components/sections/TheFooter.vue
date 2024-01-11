@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__container container">
-      <h1 class="footer__title">Azrul</h1>
+      <h1 class="footer__title">Kimi</h1>
       <p>Junior Front-end Developer</p>
 
       <ul class="footer__list">

@@ -3,7 +3,7 @@
     <div class="home__container container grid section__border">
       <div class="home__data grid">
         <h1 class="home__title">
-            Hi, I'm Azrul <br>
+            Hi, I'm Kimi <br>
             Frontend Developer <br>
             Based in Kuala Lumpur <br>
         </h1>
