@@ -6,8 +6,6 @@ import store from './store'
 import '@/assets/styles.css'
 import '@/assets/small-projects.css'
 
-import '@/assets/scrollreveal.min.js'
-
 const app = createApp(App);
 
 app.use(store);

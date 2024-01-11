@@ -33,15 +33,15 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Home', link: '#home'},
-        { title: 'Skills', link: '#skills'},
-        { title: 'Qualification', link: '#qualification'},
-        { title: 'Aspirations', link: '#aspirations'},
-        { title: 'Projects', link: '#small-projects'},
-        { title: 'Contact', link: '#contact'},
+        { title: 'Home', link: '#home' },
+        { title: 'Skills', link: '#skills' },
+        { title: 'Qualification', link: '#qualification' },
+        { title: 'Aspirations', link: '#aspirations' },
+        { title: 'Projects', link: '#small-projects' },
+        { title: 'Contact', link: '#contact' },
       ],
       activeLink: '#home', // Add a new data property to track the active link
-    }
+    };
   },
   methods: {
     isActiveLink(link) {
@@ -72,5 +72,5 @@ export default {
   beforeDestroy() {
     window.removeEventListener('scroll', this.scrollActive);
   },
-}
+};
 </script>
