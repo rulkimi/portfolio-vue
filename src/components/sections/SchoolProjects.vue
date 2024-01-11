@@ -9,40 +9,14 @@
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <swiper-slide>
+      <swiper-slide v-for="(project, index) in projects" :key="index">
         <div class="projects__content">
-          <img src="@/assets/img/quiz-project.png" alt="projects image" class="projects__img">
+          <img :src="project.image" :alt="`projects image ${index}`" class="projects__img">
           <div>
-            <span class="projects__subtitle">Quiz Website</span>
-            <h1 class="projects__title">HSK4 Quiz Website</h1>
-            <a href="https://rulkimi.github.io/quiz/" target="_blank" class="projects__button">
-              View demo <i class="ri-arrow-right-line"></i>
-            </a>
-          </div>
-        </div>
-      </swiper-slide>
-      
-      <swiper-slide>
-        <div class="projects__content">
-          <img src="@/assets/img/duet-project.png" alt="projects image" class="projects__img">
-          <div>
-            <span class="projects__subtitle">Web Design</span>
-            <h1 class="projects__title">Duet Display Replication</h1>
-            <a href="https://rulkimi.github.io/duet-display-clone/" target="_blank" class="projects__button">
-              View demo <i class="ri-arrow-right-line"></i>
-            </a>
-          </div>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="projects__content">
-          <img src="@/assets/img/duet-project.png" alt="projects image" class="projects__img">
-          <div>
-            <span class="projects__subtitle">Web Design</span>
-            <h1 class="projects__title">Duet Display Replication</h1>
-            <a href="https://rulkimi.github.io/duet-display-clone/" target="_blank" class="projects__button">
-              View demo <i class="ri-arrow-right-line"></i>
+            <span class="projects__subtitle">{{ project.subtitle }}</span>
+            <h1 class="projects__title">{{ project.title }}</h1>
+            <a :href="project.docs.link" target="_blank" class="projects__button">
+              {{ project.docs.isDemo ? 'View demo' : 'View in GitHub' }} <i class="ri-arrow-right-line"></i>
             </a>
           </div>
         </div>
@@ -75,6 +49,57 @@ import 'swiper/css/scrollbar';
 export default {
   name: 'SchoolProjects',
   components: { PageSection, Swiper, SwiperSlide },
+  data() {
+    return {
+      projects: [
+        {
+          image: require('@/assets/img/duet-project.png'),
+          subtitle: 'Web Design',
+          title: 'Duet Display Replication',
+          docs: {
+            isDemo: true,
+            link: 'https://rulkimi.github.io/duet-display-clone/'
+          }
+        },
+        {
+          image: require('@/assets/img/quiz-project.png'),
+          subtitle: 'Quiz Website',
+          title: 'HSK4 Quiz Website',
+          docs: {
+            isDemo: true,
+            link: 'https://rulkimi.github.io/quiz/',
+          }
+        },
+        {
+          image: require('@/assets/img/ceramics-project.jpg'),
+          subtitle: 'Machine Learning',
+          title: 'Ceramics Classification',
+          docs: {
+            isDemo: false,
+            link: 'https://github.com/rulkimi/ml-ceramics-classification'
+          } 
+        },
+        {
+          image: require('@/assets/img/bridge-project.jpg'),
+          subtitle: 'C++',
+          title: 'Bridge Stress Analysis',
+          docs: {
+            isDemo: false,
+            link: 'https://github.com/rulkimi/bridge-stress-analysis'
+          } 
+        },
+        {
+          image: require('@/assets/img/restaurant-ordering-system-project.png'),
+          subtitle: 'C',
+          title: 'Restaurant Ordering System',
+          docs: {
+            isDemo: false,
+            link: 'https://github.com/rulkimi/restaurant-ordering-system/blob/main/README.md'
+          } 
+        },
+      ],
+    };
+  },
   setup() {
     let swiperInstance;
 
