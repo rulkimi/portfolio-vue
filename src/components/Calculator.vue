@@ -67,7 +67,7 @@ export default {
         }
         this.saveCalculation();
       } catch (error) {
-        this.display = '';
+        this.clearCalculation();
         alert("Error evaluating calculation!");
       }
     },
