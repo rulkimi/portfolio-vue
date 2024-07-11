@@ -1,5 +1,5 @@
 <template>
-  <PageSection :notGrid="true" type="projects" title="School Projects" subtitle="Most recent work">
+  <PageSection :notGrid="true" type="projects" title="Side Projects" subtitle="Most recent work">
     <swiper
       class="projects__container swiper"
       :breakpoints="{ 1200: { slidesPerView: 2 } }"
@@ -48,7 +48,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default {
-  name: 'SchoolProjects',
+  name: 'SideProjects',
   components: { PageSection, Swiper, SwiperSlide },
   data() {
     return {

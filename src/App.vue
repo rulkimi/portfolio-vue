@@ -5,7 +5,7 @@
     <MySkills />
     <MyQualifications />
     <SmallProjects />
-    <SchoolProjects />
+    <SideProjects />
     <MyAspirations />
     <ContactMe />
   </main>
@@ -22,7 +22,7 @@ import MySkills from '@/components/sections/MySkills.vue';
 import MyQualifications from '@/components/sections/MyQualifications.vue';
 import MyAspirations from '@/components/sections/MyAspirations.vue';
 import SmallProjects from '@/components/sections/SmallProjects.vue';
-import SchoolProjects from '@/components/sections/SchoolProjects.vue';
+import SideProjects from '@/components/sections/SideProjects.vue';
 import ContactMe from '@/components/sections/ContactMe.vue';
 import TheFooter from './components/sections/TheFooter.vue';
 import { sr } from '@/utils/scroll-reveal';
@@ -36,7 +36,7 @@ export default {
     MyQualifications,
     MyAspirations,
     SmallProjects,
-    SchoolProjects,
+    SideProjects,
     ContactMe,
     TheFooter
   },
