@@ -46,6 +46,12 @@ export default {
         top: 0,
         behavior: 'smooth'
       });
+    },
+    scrollUp() {
+      const scrollUpElement = document.getElementById('scroll-up');
+      window.scrollY >= 350
+        ? scrollUpElement.classList.add('show-scroll')
+        : scrollUpElement.classList.remove('show-scroll');
     }
   },
   mounted() {
@@ -55,18 +61,8 @@ export default {
     sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'});
     sr.reveal(`.qualification__content, .aspirations__card`, {interval: 100});
 
-    const scrollUp = () => {
-      const scrollUpElement = document.getElementById('scroll-up');
-      window.scrollY >= 350
-        ? scrollUpElement.classList.add('show-scroll')
-        : scrollUpElement.classList.remove('show-scroll');
-    };
-
-    // Attach the scroll event listener
-    window.addEventListener('scroll', scrollUp);
-
-    // Call on page load to handle initial state
-    scrollUp();
+    window.addEventListener('scroll', this.scrollUp);
+    this.scrollUp();
   }
 }
 </script>
