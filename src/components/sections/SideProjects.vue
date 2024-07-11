@@ -54,21 +54,21 @@ export default {
     return {
       projects: [
         {
-          image: require('@/assets/img/duet-project.png'),
-          subtitle: 'Web Design',
-          title: 'Duet Display Replication',
+          image: require('@/assets/img/bus-location-project.png'),
+          subtitle: 'Fullstack App',
+          title: 'Bus Location Tracker',
           docs: {
             isDemo: true,
-            link: 'https://rulkimi.github.io/duet-display-clone/'
+            link: 'https://rulkimi.github.io/bus-location-server/'
           }
         },
         {
-          image: require('@/assets/img/quiz-project.png'),
-          subtitle: 'Quiz Website',
-          title: 'HSK4 Quiz Website',
+          image: require('@/assets/img/instagram-nonfollowers-project.png'),
+          subtitle: 'Static Website',
+          title: 'Instagram Non-followers Checker',
           docs: {
             isDemo: true,
-            link: 'https://rulkimi.github.io/quiz/',
+            link: 'https://rulkimi.github.io/insta-nonfollowers/',
           }
         },
         {
@@ -87,15 +87,6 @@ export default {
           docs: {
             isDemo: false,
             link: 'https://github.com/rulkimi/bridge-stress-analysis'
-          } 
-        },
-        {
-          image: require('@/assets/img/restaurant-ordering-system-project.png'),
-          subtitle: 'C',
-          title: 'Restaurant Ordering System',
-          docs: {
-            isDemo: false,
-            link: 'https://github.com/rulkimi/restaurant-ordering-system/blob/main/README.md'
           } 
         },
       ],
