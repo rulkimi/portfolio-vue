@@ -27,17 +27,18 @@ export default {
   data() {
     return {
       skills: [
-        { title: 'Coding skills',
+        { title: 'Tech Skills',
           icon: 'ri-code-line',
           types: [
             { name: 'HTML', mastery: 'Intermediate', image: require('@/assets/img/html-1.svg') },
             { name: 'CSS', mastery: 'Intermediate', image: require('@/assets/img/css-3.svg') },
             { name: 'JavaScript', mastery: 'Intermediate', image: require('@/assets/img/logo-javascript.svg') },
             { name: 'Vue Js', mastery: 'Intermediate', image: require('@/assets/img/vue-9.svg') },
-            { name: 'C++', mastery: 'Beginner', image: require('@/assets/img/cpp.svg') },
+            { name: 'Figma', mastery: 'Beginner', image: require('@/assets/img/figma-logo.svg') },
             { name: 'Python', mastery: 'Beginner', image: require('@/assets/img/python-5.svg') }
           ]
-        }, {
+        },
+        {
           title: 'Languages',
           icon: 'ri-pantone-line',
           types: [
