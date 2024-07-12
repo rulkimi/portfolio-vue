@@ -1,7 +1,7 @@
 <template>
   <nav class="nav container">
     <a href="#" class="nav__logo">
-      <img class="kimi__logo" src="/kimi.svg" alt="Kimi's personal logo.">Kimi
+      <img class="kimi__logo" src="../assets/img/kimi.svg" alt="Kimi's personal logo.">Kimi
     </a>
     <div class="nav__menu" ref="nav-menu">
       <ul class="nav__list grid">
