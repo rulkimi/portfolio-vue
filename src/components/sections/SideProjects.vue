@@ -54,6 +54,24 @@ export default {
     return {
       projects: [
         {
+          image: require('@/assets/img/kiminotes-project.png'),
+          subtitle: 'Documentation',
+          title: 'kiminotes',
+          docs: {
+            isDemo: true,
+            link: 'https://rulkimi.github.io/kiminotes/'
+          } 
+        },
+        {
+          image: require('@/assets/img/recipe-generator-project.png'),
+          subtitle: 'AI-Integrated App',
+          title: 'Recipe Generator',
+          docs: {
+            isDemo: true,
+            link: 'https://rulkimi.github.io/recipe-generator/'
+          } 
+        },
+        {
           image: require('@/assets/img/bus-location-project.png'),
           subtitle: 'Fullstack App',
           title: 'Bus Location Tracker',
@@ -70,24 +88,6 @@ export default {
             isDemo: true,
             link: 'https://rulkimi.github.io/insta-nonfollowers/',
           }
-        },
-        {
-          image: require('@/assets/img/ceramics-project.jpg'),
-          subtitle: 'Machine Learning',
-          title: 'Ceramics Classification',
-          docs: {
-            isDemo: false,
-            link: 'https://github.com/rulkimi/ml-ceramics-classification'
-          } 
-        },
-        {
-          image: require('@/assets/img/bridge-project.jpg'),
-          subtitle: 'C++',
-          title: 'Bridge Stress Analysis',
-          docs: {
-            isDemo: false,
-            link: 'https://github.com/rulkimi/bridge-stress-analysis'
-          } 
         },
       ],
     };
